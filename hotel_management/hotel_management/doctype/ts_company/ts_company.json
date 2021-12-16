@@ -1,0 +1,45 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name1",
+ "creation": "2021-12-07 16:04:25.990941",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "ts_linksqft",
+  "ts_linkarea"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Link",
+   "label": "Name",
+   "options": "TS_Link",
+   "unique": 1
+  },
+  {
+   "fetch_from": "name1.sqft",
+   "fieldname": "ts_linksqft",
+   "fieldtype": "Data",
+   "label": "Square Feet"
+  },
+  {
+   "fetch_from": "name1.area",
+   "fieldname": "ts_linkarea",
+   "fieldtype": "Data",
+   "label": "Area"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-12-10 15:20:54.926576",
+ "modified_by": "Administrator",
+ "module": "Hotel Management",
+ "name": "TS_Company",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

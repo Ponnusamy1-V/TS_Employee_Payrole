@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:id",
+ "creation": "2021-12-16 10:40:37.497054",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "id",
+  "name1",
+  "absent_days",
+  "start_date",
+  "end_date",
+  "role",
+  "pf",
+  "da_days",
+  "basic_pay"
+ ],
+ "fields": [
+  {
+   "fieldname": "id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "absent_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Absent days",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start date",
+   "reqd": 1
+  },
+  {
+   "default": "0000-00-00",
+   "fieldname": "end_date",
+   "fieldtype": "Data",
+   "label": "End date"
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Select",
+   "label": "Role",
+   "options": "Developer\nHouseKeeping\nIntern\nHR",
+   "reqd": 1
+  },
+  {
+   "default": "8.5",
+   "fieldname": "pf",
+   "fieldtype": "Float",
+   "label": "PF",
+   "reqd": 1
+  },
+  {
+   "fieldname": "da_days",
+   "fieldtype": "Int",
+   "label": "DA days",
+   "reqd": 1
+  },
+  {
+   "fieldname": "basic_pay",
+   "fieldtype": "Int",
+   "label": "Basic Pay ",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-12-16 12:31:14.712299",
+ "modified_by": "Administrator",
+ "module": "Hotel Management",
+ "name": "Employee_payrole",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
