@@ -52,8 +52,8 @@ def get_data(filters):
 	n=datetime.date( int(b[:4]),int(b[5:7]),int(b[8:]))
 	
 	for d in emp:
-		z=datetime.date( int(d.end_date[:4]),int(d.end_date[5:7]),int(d.end_date[8:]))
-
+		#z=datetime.date( int(d.end_date[:4]),int(d.end_date[5:7]),int(d.end_date[8:]))
+		z=d.end_date
 		if(d.start_date>=m and z<=n):
 			row = {"start_date": d.start_date, "end_date": z,"id": d.id, "name":d.name }
 			

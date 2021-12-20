@@ -20,10 +20,7 @@ class Employee_payrole(Document):
 		if(self.end_date==None):
 			self.end_date=res
 		
-		ed=int(self.end_date[8:])
-		em=int(self.end_date[5:7])
-		ey=int(self.end_date[:4])
-		e=date(ey,em,ed)
-		if((e-d).days <0):
+		#print(type(self.end_date) , type(self.start_date),type(res),res)
+		if(str(self.end_date) < self.start_date):
 			frappe.throw("End date is less than start date")
 		
