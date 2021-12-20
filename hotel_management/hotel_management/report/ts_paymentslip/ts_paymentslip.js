@@ -4,6 +4,17 @@
 
 frappe.query_reports["TS_PaymentSlip"] = {
 	"filters": [
-
+		{
+			fieldname:"start_date",
+			label: __("Start Date"),
+			fieldtype: "Date",
+			reqd:1
+		},
+		{
+			fieldname:"end_date",
+			label: __("End Date"),
+			fieldtype: "Date",
+			reqd:1
+		}
 	]
 };
