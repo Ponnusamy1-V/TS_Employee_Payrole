@@ -38,27 +38,25 @@ def get_columns(filters):
 		]
 	return columns
 
-def get_conditions(filters):
-	conditions = {}
 
-	if filters.start_date:
-		conditions["start_date"] = filters.start_date
-	if filters.end_date:
-		conditions["End_date"] =filters.end_date
-	
-	return conditions
 
 
 def get_data(filters):
 
 	data = []
-	conditions = get_conditions(filters)
 	emp = frappe.db.get_all("Employee_payrole", fields=["id","name","start_date", "end_date"],
-		 filters=conditions, order_by='id')
+		  order_by='id')
+	a=filters.start_date
+	b=filters.end_date
+	m=datetime.date( int(a[:4]),int(a[5:7]),int(a[8:]))
+	n=datetime.date( int(b[:4]),int(b[5:7]),int(b[8:]))
 	
 	for d in emp:
-		row = {"start_date": d.start_date, "end_date": d.end_date,"id": d.id, "name":d.name }
+		z=datetime.date( int(d.end_date[:4]),int(d.end_date[5:7]),int(d.end_date[8:]))
 
-		data.append(row)
+		if(d.start_date>=m and z<=n):
+			row = {"start_date": d.start_date, "end_date": z,"id": d.id, "name":d.name }
+			
+			data.append(row)
 
 	return data
